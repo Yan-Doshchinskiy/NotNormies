@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import { CircularProgress } from "@material-ui/core";
 import { GatewayStatus, useGateway } from "@civic/solana-gateway-react";
-import { CandyMachineAccount } from "./candy-machine";
+import { CandyMachineAccount } from "utils/candy-machine";
 
 export const CTAButton = styled(Button)`
   width: 100%;

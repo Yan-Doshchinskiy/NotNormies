@@ -15,10 +15,10 @@ import {
     CANDY_MACHINE_PROGRAM,
     getCandyMachineState,
     mintOneToken,
-} from './candy-machine';
-import {AlertState} from './utils';
-import {Header} from './Header';
-import {MintButton} from './MintButton';
+} from 'utils/candy-machine';
+import { AlertState } from 'utils/utils';
+import { Header } from 'components/Header/Header';
+import { MintButton } from 'components/MintButton/MintButton';
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
@@ -41,7 +41,7 @@ export interface HomeProps {
     rpcHost: string;
 }
 
-const Home = (props: HomeProps) => {
+export const OldHome = (props: HomeProps) => {
     const [isUserMinting, setIsUserMinting] = useState(false);
     const [candyMachine, setCandyMachine] = useState<CandyMachineAccount>();
     const [alertState, setAlertState] = useState<AlertState>({
@@ -213,4 +213,4 @@ const Home = (props: HomeProps) => {
     );
 };
 
-export default Home;
+export default OldHome;

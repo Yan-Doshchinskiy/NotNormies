@@ -3,9 +3,9 @@ import * as anchor from "@project-serum/anchor";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { MintCountdown } from "./MintCountdown";
-import { toDate, formatNumber } from "./utils";
-import { CandyMachineAccount } from "./candy-machine";
+import { MintCountdown } from "components/MintCountdown/MintCountdown";
+import { toDate, formatNumber } from "utils/utils";
+import { CandyMachineAccount } from "utils/candy-machine";
 
 type HeaderProps = {
   candyMachine?: CandyMachineAccount | undefined;
