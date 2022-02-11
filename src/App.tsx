@@ -21,6 +21,7 @@ import {
 import { WalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 
 import { ThemeProvider, createTheme } from '@material-ui/core';
+import Layout from "./components/Layout/Layout";
 // import Home from './pages/Home/Home';
 
 const theme = createTheme({
@@ -51,6 +52,7 @@ console.log('ENVS', network, rpcHost, process.env.REACT_APP_CANDY_START_DATE)
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
+  // @ts-ignore
   const match = useRoutes(routes);
   const wallets = useMemo(
     () => [
@@ -68,7 +70,9 @@ const App = () => {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
-              {match}
+              <Layout>
+                {match}
+              </Layout>
           </WalletDialogProvider>
         </WalletProvider>
       </ConnectionProvider>
