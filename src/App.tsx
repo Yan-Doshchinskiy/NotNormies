@@ -1,7 +1,7 @@
 import './App.scss';
 import React, { useMemo } from 'react';
 // import * as anchor from '@project-serum/anchor';
-import routes from 'routes/routes'
+import routes from 'routes/routes';
 import { useRoutes } from 'hookrouter';
 
 import { clusterApiUrl } from '@solana/web3.js';
@@ -48,7 +48,7 @@ const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
 
 // const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 // const txTimeoutInMilliseconds = 30000;
-console.log('ENVS', network, rpcHost, process.env.REACT_APP_CANDY_START_DATE)
+console.log('ENVS', network, rpcHost, process.env.REACT_APP_CANDY_START_DATE);
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
