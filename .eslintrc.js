@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['prettier', 'prettier', 'react', '@typescript-eslint'],
   rules: {
+    'semi': ["error", "always"],
     'react/prop-types': 'off',
     'no-shadow': 'off',
     'global-require': 'off',
@@ -25,7 +26,8 @@ module.exports = {
     'consistent-return': 'off',
     'no-nested-ternary': 'off',
     'no-console': 'off',
-    'react/require-default-props': 'off'
+    'react/require-default-props': 'off',
+    'jsx-a11y/control-has-associated-label': 'off'
   },
   settings: {
     'import/resolver': {},

@@ -1,79 +1,69 @@
 import React from "react";
-import * as anchor from "@project-serum/anchor";
+import './Header.scss';
+import {ReactComponent as Logo} from 'assets/img/logo.svg';
+import {ReactComponent as Github} from 'assets/img/icon/github.svg';
+import {ReactComponent as Instagram} from 'assets/img/icon/instagram.svg';
+import {ReactComponent as Twitter} from 'assets/img/icon/twitter.svg';
+import {ReactComponent as Discord} from 'assets/img/icon/discord.svg';
 
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { MintCountdown } from "components/MintCountdown/MintCountdown";
-import { toDate, formatNumber } from "utils/utils";
-import { CandyMachineAccount } from "utils/candy-machine";
-
-type HeaderProps = {
-  candyMachine?: CandyMachineAccount | undefined;
-};
-
-export const Header = ({ candyMachine }: HeaderProps) => {
-  return (
-    <Grid container direction="row" justifyContent="center" wrap="nowrap">
-      <Grid container direction="row" wrap="nowrap">
-        { candyMachine && (
-          <Grid container direction="row" wrap="nowrap">
-            <Grid container direction="column">
-              <Typography variant="body2" color="textSecondary">
-                Remaining
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                style={ {
-                  fontWeight: "bold"
-                } }
-              >
-                { `${candyMachine?.state.itemsRemaining}` }
-              </Typography>
-            </Grid>
-            <Grid container direction="column">
-              <Typography variant="body2" color="textSecondary">
-                Price
-              </Typography>
-              <Typography
-                variant="h6"
-                color="textPrimary"
-                style={ { fontWeight: "bold" } }
-              >
-                { getMintPrice(candyMachine) }
-              </Typography>
-            </Grid>
-          </Grid>
-        ) }
-        <MintCountdown
-          date={ toDate(
-            candyMachine?.state.goLiveDate
-              ? candyMachine?.state.goLiveDate
-              : candyMachine?.state.isPresale
-                ? new anchor.BN(new Date().getTime() / 1000)
-                : undefined
-          ) }
-          style={ { justifyContent: "flex-end" } }
-          status={
-            !candyMachine?.state?.isActive || candyMachine?.state?.isSoldOut
-              ? "COMPLETED"
-              : candyMachine?.state.isPresale
-                ? "PRESALE"
-                : "LIVE"
-          }
-        />
-      </Grid>
-    </Grid>
-  );
-};
-
-const getMintPrice = (candyMachine: CandyMachineAccount): string => {
-  const price = formatNumber.asNumber(
-    candyMachine.state.isPresale && candyMachine.state.whitelistMintSettings?.discountPrice
-      ? candyMachine.state.whitelistMintSettings?.discountPrice
-      : candyMachine.state.price
-  );
-  return `◎ ${price}`;
+export const Header = () => {
+    const tabs = [
+        {
+            id: 0,
+            title: "ROADMAP",
+            key: "roadmap"
+        },
+        {
+            id: 1,
+            title: "TEAM",
+            key: "team"
+        }
+    ];
+    const buttons = [
+        {
+            id: 0,
+            Component: Discord,
+            link: "https://www.discord.com"
+        },
+        {
+            id: 1,
+            Component: Twitter,
+            link: "https://www.twitter.com"
+        },
+        {
+            id: 2,
+            Component: Instagram,
+            link: "https://www.instagram.com"
+        },
+        {
+            id: 3,
+            Component: Github,
+            link: "https://www.github.com"
+        }
+    ];
+    return (
+        <div className="header">
+             <Logo/>
+             <div className="header__links">
+                {tabs.map((tab) => (
+                    <button type="button" className="header__tab" key={tab.id}>{tab.title}</button>
+                ))}
+             </div>
+            <div className="header__panel">
+                {buttons.map(({id, Component, link}) => (
+                    <a
+                        key={id}
+                        className="header__social"
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <Component className="header__icon" height="50px" width="50px" />
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Header;

@@ -1,0 +1,69 @@
+@import 'assets/scss/mixins/boxShadow.scss';
+.header {
+  @include boxShadow;
+  width: 100%;
+  background-color: #000000;
+  position: sticky;
+  top: 15px;
+  padding: 12px 90px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 200px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  &__logo {
+
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 34px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0 30px;
+    margin-right: 100px;
+    transition: all 200ms ease-in-out;
+    &:last-child {
+      margin-right: unset;
+    }
+    &:hover {
+      color: #898b8f;
+      //color: #730028;
+    }
+    &:active {
+      color: #5d6062;
+      //color: #560256;
+    }
+  }
+
+  &__panel {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__social {
+    cursor: pointer;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+
+  &__icon {
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

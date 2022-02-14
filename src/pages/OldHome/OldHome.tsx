@@ -17,7 +17,7 @@ import {
     mintOneToken,
 } from 'utils/candy-machine';
 import { AlertState } from 'utils/utils';
-import { Header } from 'components/Header/Header';
+// import { Header } from 'components/Header/Header';
 import { MintButton } from 'components/MintButton/MintButton';
 
 const ConnectButton = styled(WalletDialogButton)`
@@ -158,7 +158,7 @@ export const OldHome = (props: HomeProps) => {
                         <ConnectButton>Connect Wallet</ConnectButton>
                     ) : (
                         <>
-                            <Header candyMachine={candyMachine}/>
+                            {/* <Header candyMachine={candyMachine}/> */}
                             <MintContainer>
                                 {candyMachine?.state.isActive &&
                                 candyMachine?.state.gatekeeper &&

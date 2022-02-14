@@ -9,4 +9,4 @@ export interface SingleRout {
 }
 
 
-export default Pages
+export default Pages;
