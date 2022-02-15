@@ -14,6 +14,7 @@ module.exports = {
   plugins: ['prettier', 'prettier', 'react', '@typescript-eslint'],
   rules: {
     'semi': ["error", "always"],
+    'object-curly-spacing': ["error", "always"],
     'react/prop-types': 'off',
     'no-shadow': 'off',
     'global-require': 'off',

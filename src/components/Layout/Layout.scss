@@ -1,11 +1,11 @@
+@import "assets/scss/mixins/container.scss";
+
 .layout {
+    @include container;
     position: relative;
-    width: 1920px;
-    max-width: 1920px;
     margin: auto;
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
-    height: 4000px;
 }
 
