@@ -1,10 +1,10 @@
 import React from "react";
 import './Header.scss';
-import {ReactComponent as Logo} from 'assets/img/logo.svg';
-import {ReactComponent as Github} from 'assets/img/icon/github.svg';
-import {ReactComponent as Instagram} from 'assets/img/icon/instagram.svg';
-import {ReactComponent as Twitter} from 'assets/img/icon/twitter.svg';
-import {ReactComponent as Discord} from 'assets/img/icon/discord.svg';
+import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import { ReactComponent as Github } from 'assets/img/icon/github.svg';
+import { ReactComponent as Instagram } from 'assets/img/icon/instagram.svg';
+import { ReactComponent as Twitter } from 'assets/img/icon/twitter.svg';
+import { ReactComponent as Discord } from 'assets/img/icon/discord.svg';
 
 export const Header = () => {
     const tabs = [
@@ -43,14 +43,14 @@ export const Header = () => {
     ];
     return (
         <div className="header">
-             <Logo/>
-             <div className="header__links">
+            <Logo/>
+            <div className="header__links">
                 {tabs.map((tab) => (
                     <button type="button" className="header__tab" key={tab.id}>{tab.title}</button>
                 ))}
-             </div>
+            </div>
             <div className="header__panel">
-                {buttons.map(({id, Component, link}) => (
+                {buttons.map(({ id, Component, link }) => (
                     <a
                         key={id}
                         className="header__social"

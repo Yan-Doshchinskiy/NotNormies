@@ -2,7 +2,7 @@ import React from 'react';
 import './Layout.scss';
 import Header from 'components/Header/Header';
 
-export const Layout = ({children}: {children: React.ReactNode}) => {
+export const Layout = ({ children }: {children: React.ReactNode}) => {
     return (
         <div className="layout">
             <Header />

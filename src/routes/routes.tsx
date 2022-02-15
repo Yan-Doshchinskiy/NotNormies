@@ -1,7 +1,7 @@
 import React from 'react';
 import HomePage from 'pages/Home/Home';
-import {Pages} from "types/main";
-import {SingleRout} from "../types/main";
+import { Pages } from "types/main";
+import { SingleRout } from "../types/main";
 
 export const routesArray: Array<SingleRout> = [
     {

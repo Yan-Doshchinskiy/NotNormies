@@ -1,0 +1,12 @@
+@import 'assets/scss/variables.scss';
+
+.base-badge {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: #000000;
+  background-color: $purple-400;
+}

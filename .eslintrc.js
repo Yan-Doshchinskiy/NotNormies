@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['prettier', 'prettier', 'react', '@typescript-eslint'],
   rules: {
+    'react/button-has-type': 'off',
     'semi': ["error", "always"],
     'object-curly-spacing': ["error", "always"],
     "react/jsx-indent" : ["error", 4],
