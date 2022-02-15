@@ -21,7 +21,7 @@ import {
 import { WalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 
 import { ThemeProvider, createTheme } from '@material-ui/core';
-import Layout from "./components/Layout/Layout";
+import Layout from "./layout/Layout";
 // import Home from './pages/Home/Home';
 
 const theme = createTheme({
@@ -66,17 +66,17 @@ const App = () => {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets} autoConnect>
-          <WalletDialogProvider>
-              <Layout>
-                {match}
-              </Layout>
-          </WalletDialogProvider>
-        </WalletProvider>
-      </ConnectionProvider>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+          <ConnectionProvider endpoint={endpoint}>
+              <WalletProvider wallets={wallets} autoConnect>
+                  <WalletDialogProvider>
+                      <Layout>
+                          {match}
+                      </Layout>
+                  </WalletDialogProvider>
+              </WalletProvider>
+          </ConnectionProvider>
+      </ThemeProvider>
   );
 };
 

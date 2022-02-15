@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'semi': ["error", "always"],
     'object-curly-spacing': ["error", "always"],
+    "react/jsx-indent" : ["error", 4],
     'react/prop-types': 'off',
     'no-shadow': 'off',
     'global-require': 'off',

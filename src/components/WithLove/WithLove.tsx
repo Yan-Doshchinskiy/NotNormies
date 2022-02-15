@@ -7,9 +7,9 @@ import { ReactComponent as Skeleton } from 'assets/img/withLove/skeleton.svg';
 export const WithLove = () => {
     return (
         <div className="withlove">
-            <Guy />
-            <Heart />
-            <Skeleton />
+            <Guy className="withlove__img" />
+            <Heart className="withlove__img" />
+            <Skeleton className="withlove__img" />
         </div>
     );
 };
