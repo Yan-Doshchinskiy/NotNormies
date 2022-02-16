@@ -22,14 +22,15 @@ export const Mint = () => {
     return (
         <div className="mint" id="mint">
             <div />
-            <h3 className="mint__title">Mint title</h3>
+            <h3 className="mint__title">Zdorova dolboebi</h3>
             <Minter className="mint__img" />
             <div className="mint__description">
                 <p className="mint__text">
                     He standard Lorem Ipsum passage, used since the 1500s
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Section 1.10.32 of de Finibus Bonorum et Malorum, written by Cicero in 45 BC
-                    Sed qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+
                 </p>
                 <div className="mint__panel">
                     <BaseBadge className="mint__counter">{currentCount} / {maxCount}</BaseBadge>

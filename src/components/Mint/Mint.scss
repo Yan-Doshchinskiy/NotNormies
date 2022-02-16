@@ -1,21 +1,12 @@
-@import 'assets/scss/mixins/boxShadow.scss';
+@import 'assets/scss/mixins/box.scss';
 
 .mint {
-  @include boxShadow;
-  border-radius: 26px;
-  width: 100%;
-  background-color: #000000;
-  padding: 50px 75px 75px 75px;
+  @include box;
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-column-gap: 80px;
   grid-row-gap: 20px;
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 42px;
-  }
+  margin-bottom: 80px;
   &__description {
     width: 100%;
     display: flex;
@@ -25,6 +16,8 @@
   }
   &__text {
     text-align: center;
+    font-family: "Cinzel", serif;
+    margin-bottom: 30px;
   }
   &__img {
     max-width: 400px;
