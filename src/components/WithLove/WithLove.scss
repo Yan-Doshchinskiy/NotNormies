@@ -6,5 +6,9 @@
   z-index: 10;
   &__img {
     z-index: 10;
+    max-height: 700px;
+    &_heart {
+      //align-self: center;
+    }
   }
 }

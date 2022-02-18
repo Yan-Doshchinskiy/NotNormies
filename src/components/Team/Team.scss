@@ -1,0 +1,10 @@
+@import 'assets/scss/mixins/box.scss';
+
+.team {
+  @include box;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-column-gap: 80px;
+  grid-row-gap: 20px;
+  margin-bottom: 80px;
+}

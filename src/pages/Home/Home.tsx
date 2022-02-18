@@ -3,6 +3,7 @@ import './Home.scss';
 import WithLove from 'components/WithLove/WithLove';
 import RoadMap from 'components/RoadMap/RoadMap';
 import Mint from 'components/Mint/Mint';
+import Team from 'components/Team/Team';
 import Signature from 'components/Signature/Signature';
 
 
@@ -11,8 +12,9 @@ export const Home = () => {
         <div className="home">
             <Mint />
             <RoadMap />
+            <Team />
             <WithLove />
-            <Signature />
+            <Signature /> {/* position absolute */}
         </div>
     );
 };
