@@ -6,20 +6,41 @@ import { ReactComponent as Instagram } from 'assets/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from 'assets/img/icon/twitter.svg';
 import { ReactComponent as Discord } from 'assets/img/icon/discord.svg';
 
+type HeaderTab = {
+    id: number,
+    title: string,
+    key: string,
+    // ref: MutableRefObject<HTMLElement> | MutableRefObject<null> | undefined
+}
+
+type HeaderSocial = {
+    id: number,
+    Component: React.JSXElementConstructor<{ className: string, height: string, width: string }>,
+    link: string,
+}
+
 export const Header = () => {
-    const tabs = [
+    const tabs: Array<HeaderTab> = [
         {
             id: 0,
-            title: "ROADMAP",
-            key: "roadmap"
+            title: "MINT",
+            key: "mint",
+            // ref: 1
         },
         {
             id: 1,
+            title: "ROADMAP",
+            key: "roadmap",
+            // ref: 2
+        },
+        {
+            id: 2,
             title: "TEAM",
-            key: "team"
+            key: "team",
+            // ref: 3
         }
     ];
-    const buttons = [
+    const buttons: Array<HeaderSocial> = [
         {
             id: 0,
             Component: Discord,
@@ -41,12 +62,25 @@ export const Header = () => {
             link: "https://www.github.com"
         }
     ];
+    // const handleRef = (ref:HeaderTab["ref"]): void => {
+    //         // window.scrollTo({
+    //         //     behavior: "smooth",
+    //         //     top: ref?.current?.offsetTop
+    //         // });
+    // };
     return (
         <div className="header">
             <Logo/>
             <div className="header__links">
                 {tabs.map((tab) => (
-                    <button type="button" className="header__tab" key={tab.id}>{tab.title}</button>
+                    <button
+                        type="button"
+                        className="header__tab"
+                        key={tab.id}
+                        // onClick={() => handleRef(tab.ref)}
+                    >
+                        {tab.title}
+                    </button>
                 ))}
             </div>
             <div className="header__panel">

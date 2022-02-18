@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import './Home.scss';
 import WithLove from 'components/WithLove/WithLove';
@@ -11,8 +12,8 @@ export const Home = () => {
     return (
         <div className="home">
             <Mint />
-            <RoadMap />
-            <Team />
+            <RoadMap  />
+            <Team  />
             <WithLove />
             <Signature /> {/* position absolute */}
         </div>

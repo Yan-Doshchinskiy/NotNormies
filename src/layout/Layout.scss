@@ -1,11 +1,14 @@
 @import "assets/scss/mixins/container.scss";
 
 .layout {
-    @include container;
+    @include layout;
     position: relative;
     margin: auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
     color: #FFFFFF;
+    background-image: url("../assets/img/background.svg");
+    background-repeat: repeat;
 }
 

@@ -2,7 +2,7 @@ import './App.scss';
 import React, { useMemo } from 'react';
 // import * as anchor from '@project-serum/anchor';
 import Router from "routes/Router";
-
+import { BrowserRouter } from "react-router-dom";
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
@@ -67,9 +67,11 @@ const App = () => {
           <ConnectionProvider endpoint={endpoint}>
               <WalletProvider wallets={wallets} autoConnect>
                   <WalletDialogProvider>
-                      <Layout>
-                          <Router />
-                      </Layout>
+                      <BrowserRouter>
+                          <Layout>
+                              <Router />
+                          </Layout>
+                      </BrowserRouter>
                   </WalletDialogProvider>
               </WalletProvider>
           </ConnectionProvider>

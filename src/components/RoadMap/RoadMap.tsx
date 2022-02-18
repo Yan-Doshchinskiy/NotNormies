@@ -1,7 +1,6 @@
 import React from "react";
 import './RoadMap.scss';
 import { ReactComponent as Collage } from "assets/img/roadmap/collage.svg";
-// import { ReactComponent as Border } from "assets/img/roadmap/border.svg";
 
 export const RoadMap = () => {
     return (
