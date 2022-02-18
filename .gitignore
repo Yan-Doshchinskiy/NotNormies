@@ -85,6 +85,7 @@ npm-debug.log
 dist
 backup
 ../.idea
+.idea
 /package-lock.json
 
 # Gatsby files
