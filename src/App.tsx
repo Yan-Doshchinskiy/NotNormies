@@ -1,8 +1,7 @@
 import './App.scss';
 import React, { useMemo } from 'react';
 // import * as anchor from '@project-serum/anchor';
-import routes from 'routes/routes';
-import { useRoutes } from 'hookrouter';
+import Router from "routes/Router";
 
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
@@ -52,8 +51,6 @@ console.log('ENVS', network, rpcHost, process.env.REACT_APP_CANDY_START_DATE);
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
-  // @ts-ignore
-  const match = useRoutes(routes);
   const wallets = useMemo(
     () => [
       getPhantomWallet(),
@@ -71,7 +68,7 @@ const App = () => {
               <WalletProvider wallets={wallets} autoConnect>
                   <WalletDialogProvider>
                       <Layout>
-                          {match}
+                          <Router />
                       </Layout>
                   </WalletDialogProvider>
               </WalletProvider>
