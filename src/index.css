@@ -37,7 +37,7 @@ body {
   line-height: 1.5;
   margin: 0 !important;
   font-family: Arial, sans-serif;
-  color: #FFFFFF;
+  color: #dadada;
   background: -webkit-linear-gradient(180deg, rgb(169, 1, 58) 30%, rgb(51, 0, 51) 64%);
   background: -moz-linear-gradient(180deg, rgb(169, 1, 58) 30%, rgb(51, 0, 51) 64%);
   background: linear-gradient(180deg, rgb(169, 1, 58) 30%, rgb(51, 0, 51) 64%);
@@ -153,12 +153,12 @@ button {
 .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #218380 !important;
 }
-.custom-switch.b-custom-control-lg
-.custom-control-input:checked
+.custom-switch.b-custom-control-lg,
+.custom-control-input:checked,
 ~ .custom-control-label::after,
-.input-group-lg
-.custom-switch
-.custom-control-input:checked
+.input-group-lg,
+.custom-switch,
+.custom-control-input:checked,
 ~ .custom-control-label::after {
   transform: translateX(1rem) scale(1.2);
 }
