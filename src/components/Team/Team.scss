@@ -32,7 +32,9 @@
   }
   .singleMember {
     &__photo {
-      width: 100%;
+      min-width: 100%;
+      max-width: $image_max_width;
+      max-height: $image_max_height;
       height: max-content;
       border-radius: 22px;
       object-fit: fill;
@@ -73,8 +75,5 @@
         top: 5%;
       }
     }
-  }
-  .vector {
-
   }
 }
