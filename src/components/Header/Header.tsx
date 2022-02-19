@@ -5,12 +5,12 @@ import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import { ReactComponent as Instagram } from 'assets/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from 'assets/img/icon/twitter.svg';
 import { ReactComponent as Discord } from 'assets/img/icon/discord.svg';
+import Pages from "../../types/main";
 
 type HeaderTab = {
     id: number,
     title: string,
     key: string,
-    // ref: MutableRefObject<HTMLElement> | MutableRefObject<null> | undefined
 }
 
 type HeaderSocial = {
@@ -25,19 +25,16 @@ export const Header = () => {
             id: 0,
             title: "MINT",
             key: "mint",
-            // ref: 1
         },
         {
             id: 1,
             title: "ROADMAP",
             key: "roadmap",
-            // ref: 2
         },
         {
             id: 2,
             title: "TEAM",
             key: "team",
-            // ref: 3
         }
     ];
     const buttons: Array<HeaderSocial> = [
@@ -62,25 +59,18 @@ export const Header = () => {
         //     link: "https://www.github.com"
         // }
     ];
-    // const handleRef = (ref:HeaderTab["ref"]): void => {
-    //         // window.scrollTo({
-    //         //     behavior: "smooth",
-    //         //     top: ref?.current?.offsetTop
-    //         // });
-    // };
     return (
         <div className="header">
             <Logo/>
             <div className="header__links">
                 {tabs.map((tab) => (
-                    <button
-                        type="button"
+                    <a
                         className="header__tab"
                         key={tab.id}
-                        // onClick={() => handleRef(tab.ref)}
+                        href={`${Pages.HOME}${tab.key}`}
                     >
                         {tab.title}
-                    </button>
+                    </a>
                 ))}
             </div>
             <div className="header__panel">

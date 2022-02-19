@@ -162,3 +162,8 @@ button {
 ~ .custom-control-label::after {
   transform: translateX(1rem) scale(1.2);
 }
+
+
+a {
+  text-decoration: none;
+}
