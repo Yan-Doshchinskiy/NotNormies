@@ -1,7 +1,7 @@
 import React from "react";
 import './Header.scss';
 import { ReactComponent as Logo } from 'assets/img/logo.svg';
-import { ReactComponent as Github } from 'assets/img/icon/github.svg';
+// import { ReactComponent as Github } from 'assets/img/icon/github.svg';
 import { ReactComponent as Instagram } from 'assets/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from 'assets/img/icon/twitter.svg';
 import { ReactComponent as Discord } from 'assets/img/icon/discord.svg';
@@ -44,23 +44,23 @@ export const Header = () => {
         {
             id: 0,
             Component: Discord,
-            link: "https://www.discord.com"
+            link: `https://discord.gg/${process.env.REACT_APP_DISCORD_ID}`
         },
         {
             id: 1,
             Component: Twitter,
-            link: "https://www.twitter.com"
+            link: `https://www.twitter.com/${process.env.REACT_APP_TWITTER_ID}`
         },
         {
             id: 2,
             Component: Instagram,
-            link: "https://www.instagram.com"
+            link: `https://www.instagram.com/${process.env.REACT_APP_INSTAGRAM_ID}`
         },
-        {
-            id: 3,
-            Component: Github,
-            link: "https://www.github.com"
-        }
+        // {
+        //     id: 3,
+        //     Component: Github,
+        //     link: "https://www.github.com"
+        // }
     ];
     // const handleRef = (ref:HeaderTab["ref"]): void => {
     //         // window.scrollTo({
