@@ -67,7 +67,7 @@ export const Header = () => {
                     <a
                         className="header__tab"
                         key={tab.id}
-                        href={`${Pages.HOME}${tab.key}`}
+                        href={`${Pages.HOME}#${tab.key}`}
                     >
                         {tab.title}
                     </a>

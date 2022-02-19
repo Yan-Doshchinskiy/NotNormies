@@ -20,7 +20,8 @@ export const Mint = () => {
         setMaxCount(1000);
     }, []);
     return (
-        <div className="mint" id="mint">
+        <div className="mint">
+            <div className="mint__anchor" id="mint" />
             <div />
             <h3 className="mint__title">Zdorova dolboebi</h3>
             <Minter className="mint__img" />

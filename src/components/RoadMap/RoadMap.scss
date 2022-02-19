@@ -1,8 +1,11 @@
 @import 'assets/scss/mixins/box.scss';
 @import 'assets/scss/variables.scss';
+@import 'assets/scss/mixins/anchor.scss';
+
 
 .roadmap {
   @include box;
+  @include withAnchor;
   display: grid;
   grid-template-columns: 45% 55%;
   padding: 80px 109px 105px 109px;

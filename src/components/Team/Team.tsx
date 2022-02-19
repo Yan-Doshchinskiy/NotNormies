@@ -17,7 +17,8 @@ import { ReactComponent as VectorFourthLeft } from "assets/img/team/vectors/four
 
 export const Team = () => {
     return (
-        <div className="team" id="team">
+        <div className="team">
+            <div className="team__anchor" id="team" />
             <h3 className="team__title">Our Team</h3>
             <Underline className="team__underline" />
             <div className="team__members">

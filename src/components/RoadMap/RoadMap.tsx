@@ -4,7 +4,8 @@ import { ReactComponent as Collage } from "assets/img/roadmap/collage.svg";
 
 export const RoadMap = () => {
     return (
-        <div className="roadmap" id="roadmap">
+        <div className="roadmap">
+            <div className="roadmap__anchor" id="roadmap" />
             <Collage className="roadmap__image" /> {/* position absolute */}
             <div />
             <div className="roadmap__right">

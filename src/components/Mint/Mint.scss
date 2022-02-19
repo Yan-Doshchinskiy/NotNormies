@@ -1,8 +1,10 @@
 @import 'assets/scss/mixins/box.scss';
 @import 'assets/scss/variables.scss';
+@import 'assets/scss/mixins/anchor.scss';
 
 .mint {
   @include box;
+  @include withAnchor;
   display: grid;
   grid-template-columns: $image_max_width 1fr;
   grid-column-gap: 80px;
