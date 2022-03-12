@@ -5,11 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 
+const target = document.getElementById('root');
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
-  document.getElementById("root")
+    target
 );
 
 // If you want to start measuring performance in your app, pass a function

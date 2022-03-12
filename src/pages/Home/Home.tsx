@@ -3,6 +3,7 @@ import './Home.scss';
 import WithLove from 'components/WithLove/WithLove';
 import RoadMap from 'components/RoadMap/RoadMap';
 import Mint from 'components/Mint/Mint';
+import Team from 'components/Team/Team';
 import Signature from 'components/Signature/Signature';
 import {
     connectMetamaskWallet,
@@ -59,9 +60,10 @@ export const Home = () => {
     return (
         <div className="home">
             <Mint isConnected={isConnected} handleConnect={handleConnect}/>
-            <RoadMap/>
-            <WithLove/>
-            <Signature/>
+            <RoadMap  />
+            <Team  />
+            <WithLove />
+            <Signature /> {/* position absolute */}
         </div>
     );
 };

@@ -2,10 +2,10 @@ export enum Pages {
     HOME = "/"
 }
 
-export interface SingleRout {
-    title: string,
-    link: Pages,
-    component: () => JSX.Element,
+export enum BlockRefs {
+    MINT = "mintRef",
+    ROADMAP = "roadmapRef",
+    TEAM = "teamRef"
 }
 
 

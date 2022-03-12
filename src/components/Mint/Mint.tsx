@@ -69,12 +69,11 @@ export const Mint = ({ isConnected, handleConnect }: IMintProps) => {
 
     // template
     return (
-        <div className="mint" id="mint">
-            <div/>
-            <h3 className="mint__title">
-                Zdorova dolboebi
-            </h3>
-            <Minter className="mint__img"/>
+        <div className="mint">
+            <div className="mint__anchor" id="mint" />
+            <div />
+            <h3 className="mint__title">Zdorova dolboebi</h3>
+            <Minter className="mint__img" />
             <div className="mint__description">
                 <p className="mint__text">
                     He standard Lorem Ipsum passage, used since the 1500s

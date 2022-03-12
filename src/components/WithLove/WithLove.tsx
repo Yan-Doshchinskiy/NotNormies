@@ -8,7 +8,7 @@ export const WithLove = () => {
     return (
         <div className="withlove">
             <Guy className="withlove__img" />
-            <Heart className="withlove__img" />
+            <Heart className="withlove__img withlove__img_heart" />
             <Skeleton className="withlove__img" />
         </div>
     );
