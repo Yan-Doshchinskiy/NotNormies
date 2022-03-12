@@ -1,4 +1,4 @@
-@import 'assets/scss/variables.scss';
+@import './../../../assets/scss/variables.scss';
 
 .base-button {
   font-family: "a_CampusOtlSh", sans-serif;
@@ -22,5 +22,12 @@
     //-moz-box-shadow: 0 0 140px 140px #72112d inset, 0 0 10px 4px #72112d;
     //box-shadow: 0 0 140px 140px #72273e inset, 0 0 10px 4px #72112d;
     transform: scale(0.95);
+  }
+  &:disabled {
+    background-color: gray;
+    color: black;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
   }
 }

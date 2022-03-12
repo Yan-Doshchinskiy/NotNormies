@@ -8,19 +8,21 @@ interface IButtonProps  {
     children?: React.ReactNode,
     className?: string,
     onClick?: () => any,
+    disabled?: boolean,
 }
 
 const defaultProps:IButtonProps = {
     type: "button",
     children: null,
     className: '',
-    onClick: () => {}
+    onClick: () => {},
+    disabled: false
 };
 
 
-export const BaseButton = ({ type, children, className, onClick }: IButtonProps) => {
+export const BaseButton = ({ type, children, className, onClick, disabled }: IButtonProps) => {
     return (
-        <button type={type} className={`base-button ${className}`} onClick={onClick}>
+        <button disabled={disabled} type={type} className={`base-button ${className}`} onClick={onClick}>
             {children}
         </button>
     );

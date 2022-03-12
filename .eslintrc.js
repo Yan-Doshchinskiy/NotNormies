@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['prettier', 'prettier', 'react', '@typescript-eslint'],
   rules: {
+    'react-hooks/exhaustive-deps': 'off',
     'react/button-has-type': 'off',
     'semi': ["error", "always"],
     'object-curly-spacing': ["error", "always"],
@@ -21,7 +22,7 @@ module.exports = {
     'no-shadow': 'off',
     'global-require': 'off',
     'import/no-extraneous-dependencies': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx', '.ts', '.js'] }],
     'import/extensions': 'off',
     "import/no-unresolved": 'off',
