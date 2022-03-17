@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import { ReactComponent as Instagram } from 'assets/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from 'assets/img/icon/twitter.svg';
 import { ReactComponent as Discord } from 'assets/img/icon/discord.svg';
+import { ReactComponent as Polygonscan } from 'assets/img/icon/polyognscan.svg';
 import Pages from "../../types/main";
 
 type HeaderTab = {
@@ -57,7 +58,12 @@ export const Header = () => {
         //     id: 3,
         //     Component: Github,
         //     link: "https://www.github.com"
-        // }
+        // },
+        {
+            id: 4,
+            Component: Polygonscan,
+            link: `https://polygonscan.com/address/${process.env.REACT_APP_CONTRACT_ADDRESS}`
+        }
     ];
     return (
         <div className="header">
