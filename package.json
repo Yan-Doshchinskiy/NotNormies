@@ -5,6 +5,9 @@
   "dependencies": {
     "-": "0.0.1",
     "@babel/runtime": "^7.15.5",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.1",
     "@testing-library/dom": "^7.21.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

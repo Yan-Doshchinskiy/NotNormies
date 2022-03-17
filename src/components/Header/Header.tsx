@@ -67,7 +67,7 @@ export const Header = () => {
     ];
     return (
         <div className="header">
-            <Logo/>
+            <Logo className="header__logo" />
             <div className="header__links">
                 {tabs.map((tab) => (
                     <a
@@ -97,3 +97,6 @@ export const Header = () => {
 };
 
 export default Header;
+
+
+

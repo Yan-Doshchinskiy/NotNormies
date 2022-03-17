@@ -1,71 +1,131 @@
 @import 'assets/scss/mixins/boxShadow.scss';
+@import 'assets/scss/mixins/breakpoints.scss';
 .header {
   @include boxShadow;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   background-color: #000000;
   position: sticky;
-  top: 15px;
+  top: 0;
   padding: 12px 90px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 200px;
+  grid-template-columns: 10% 55% 20%;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 60px;
   &__logo {
-
+    max-width: 100%;
+    display: flex;
+    height: max-content;
+    justify-content: flex-start;
   }
 
   &__links {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   &__tab {
     text-transform: uppercase;
     font-size: 30px;
     font-weight: 500;
-    line-height: 34px;
     color: #dadada;
-
     cursor: pointer;
-    padding: 0 30px;
-    margin-right: 100px;
+    //padding: 0 30px;
     transition: all 200ms ease-in-out;
-    &:last-child {
-      margin-right: unset;
-    }
     &:hover {
       color: #898b8f;
-      //color: #730028;
     }
     &:active {
       color: #5d6062;
-      //color: #560256;
     }
   }
 
   &__panel {
-    padding: 0 15px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  //&__form {
+  //  width: 100%;
+  //  height: 100%;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //}
+  //&__select {
+  //  width: 22%;
+  //  max-width: 22%;
+  //  background-color: white;
+  //}
+
   &__social {
     cursor: pointer;
-    margin-right: 15px;
-    &:last-child {
-      margin-right: unset;
-    }
+    width: 22%;
+    max-width: 22%;
   }
 
   &__icon {
-    transition: all 400ms ease-in-out;
+    height: max-content;
 
+    transition: all 400ms ease-in-out;
+    width: 100%;
+    max-width: 100%;
     &:hover {
       transform: scale(1.2);
+    }
+  }
+  @include _1500 {
+    padding: 12px 50px;
+  }
+  @include _1400 {
+    &__tab {
+      font-size: 27px;
+    }
+  }
+  @include _1300 {
+    margin-bottom: 40px;
+    &__tab {
+      font-size: 25px;
+    }
+  }
+  @include _1199 {
+    padding: 10px 30px;
+    &__tab {
+      font-size: 22px;
+    }
+  }
+  @include _991 {
+    grid-template-columns: 10% 50% 25%;
+    margin-bottom: 30px;
+    &__tab {
+      font-size: 18px;
+    }
+  }
+  @include _767 {
+    margin-bottom: 20px;
+    &__tab {
+      font-size: 15px;
+    }
+  }
+  @include _575 {
+    margin-bottom: 15px;
+    &__tab {
+      font-size: 13px;
+    }
+  }
+  @include _480 {
+    &__tab {
+      font-size: 11px;
+    }
+  }
+  @include _400 {
+    &__tab {
+      font-size: 9px;
     }
   }
 }
