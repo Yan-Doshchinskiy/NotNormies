@@ -1,31 +1,32 @@
 @import 'assets/scss/mixins/box.scss';
 @import 'assets/scss/variables.scss';
 @import 'assets/scss/mixins/anchor.scss';
+@import 'assets/scss/mixins/breakpoints.scss';
 
 .mint {
   @include box;
   @include withAnchor;
   display: grid;
-  grid-template-columns: $image_max_width 1fr;
-  grid-column-gap: 80px;
+  grid-template-columns: 33% 57%;
+  justify-content: space-between;
   grid-row-gap: 20px;
-
-  &__description {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
   &__text {
     text-align: center;
     font-family: "Cinzel", serif;
-    margin-bottom: 30px;
+  }
+  &__left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__img {
-    max-width: $image_max_width;
-    max-height: $image_max_height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
     border-radius: 22px;
+    height: max-content;
   }
   &__panel {
     display: flex;
@@ -38,7 +39,76 @@
     margin-bottom: 20px;
   }
   &__button {
+    width: 100%;
     padding-left: 150px !important;
     padding-right: 150px !important;
   }
+  @include _1199 {
+    grid-template-columns: 100%;
+    &__img {
+      max-width: 30%;
+    }
+    &__hidden {
+      display: none;
+    }
+  }
+  @include _991{
+    &__text {
+      font-size: 16px;
+    }
+    &__counter {
+      font-size: 18px !important;
+      line-height: 18px !important;
+    }
+    &__button {
+      line-height: 42px !important;
+      font-size: 40px !important;
+      padding: 10px 0 !important;
+    }
+  }
+  @include _767 {
+    &__text {
+      font-size: 14px;
+    }
+    &__counter {
+      font-size: 16px !important;
+      line-height: 16px !important;
+    }
+  }
+  @include _575 {
+    &__text {
+      font-size: 13px;
+    }
+    &__counter {
+      font-size: 15px !important;
+      line-height: 15px !important;
+    }
+  }
+  @include _480 {
+    &__text {
+      font-size: 12px;
+    }
+    &__counter {
+      font-size: 14px !important;
+      line-height: 14px !important;
+    }
+    &__button {
+      line-height: 36px !important;
+      font-size: 36px !important;
+    }
+  }
+  @include _420 {
+    &__text {
+      font-size: 10px;
+    }
+    &__counter {
+      font-size: 12px !important;
+      line-height: 12px !important;
+    }
+    &__button {
+      line-height: 30px !important;
+      font-size: 32px !important;
+    }
+  }
+
 }
