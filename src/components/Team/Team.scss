@@ -1,6 +1,7 @@
 @import 'assets/scss/mixins/box.scss';
 @import 'assets/scss/variables.scss';
 @import 'assets/scss/mixins/anchor.scss';
+@import 'assets/scss/mixins/breakpoints.scss';
 
 .team {
   @include box;
@@ -33,10 +34,11 @@
   }
   .singleMember {
     &__photo {
+      width: 100%;
       min-width: 100%;
+      height: max-content;
       max-width: $image_max_width;
       max-height: $image_max_height;
-      height: max-content;
       border-radius: 22px;
       object-fit: fill;
       overflow: hidden;
@@ -75,6 +77,30 @@
       &_sec {
         top: 5%;
       }
+    }
+  }
+  @include _1199 {
+    &__members {
+
+      align-items: center;
+      justify-items: center;
+      grid-row-gap: 100px;
+    }
+    .singleMember {
+    }
+  }
+  @include _767 {
+    &__members {
+      grid-template-columns: 100%;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      grid-row-gap: 100px;
+    }
+    &__singleMember {
+      width: 60%;
+    }
+    .singleMember {
     }
   }
 }
