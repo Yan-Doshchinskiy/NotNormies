@@ -3,12 +3,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 3;
   &__img {
     z-index: 10;
     max-height: 700px;
-    &_heart {
-      //align-self: center;
-    }
+    height: max-content;
   }
 }
