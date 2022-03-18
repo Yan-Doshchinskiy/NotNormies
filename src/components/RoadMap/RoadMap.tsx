@@ -7,7 +7,8 @@ export const RoadMap = () => {
         <div className="roadmap">
             <div className="roadmap__anchor" id="roadmap" />
             <Collage className="roadmap__image" /> {/* position absolute */}
-            <div />
+            <div className="roadmap__hidden" />
+            <h3 className="roadmap__title">Roadmap</h3>
             <div className="roadmap__right">
                 <div className="roadmap__list">
                     <div className="roadmap__text">He standard Lorem Ipsum passage, used since the 1500s He standard Lorem Ipsum passage, used since the 1500s He standard Lorem Ipsum passage, used since the 1500s</div>

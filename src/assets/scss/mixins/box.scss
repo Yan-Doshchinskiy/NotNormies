@@ -9,8 +9,11 @@
   padding: 50px 75px 75px 75px;
   position: relative;
   margin-bottom: 80px;
+
   &__title {
-    font-family: "Cinzel", serif;
+    //font-family: "Cinzel", serif;
+    font-family: "a_CampusOtlSh", sans-serif;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +44,7 @@
   @include _480 {
     padding: 20px 30px 25px 30px;
     &__title {
-      font-size: 32px;
+      font-size: 33px;
       line-height: 34px;
     }
   }

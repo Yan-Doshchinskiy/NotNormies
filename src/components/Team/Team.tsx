@@ -52,7 +52,6 @@ export const Team = () => {
                 animation="slide"
                 swipe
                 indicators={false}
-                navButtonsAlwaysVisible
                 className="team__carousel"
             >
                 <div className="team__singleMember singleMember">

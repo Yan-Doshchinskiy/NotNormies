@@ -10,12 +10,6 @@
   flex-direction: column;
   align-items: center;
 
-  &__title {
-    font-family: "a_CampusOtlSh", sans-serif;
-    font-size: 80px;
-    line-height: 100px;
-  }
-
   &__underline {
     max-width: 460px;
     margin-bottom: 40px;
@@ -141,10 +135,6 @@
       max-height: unset;
     }
     padding-bottom: 30px;
-    &__title {
-      font-size: 60px;
-      line-height: 60px;
-    }
     &__underline {
       max-width: 80%;
       margin-bottom: 15px;
@@ -156,18 +146,6 @@
   @include _500 {
     .css-1f8sh1y {
       max-height: calc(100vw - 30px);
-    }
-  }
-  @include _480 {
-    &__title {
-      font-size: 50px;
-      line-height: 50px;
-    }
-  }
-  @include _400 {
-    &__title {
-      font-size: 42px;
-      line-height: 50px;
     }
   }
 }
