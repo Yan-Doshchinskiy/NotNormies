@@ -71,6 +71,18 @@
   }
 }
 
+@mixin _550 {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin _500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 @mixin _480 {
   @media (max-width: 480px) {
     @content;

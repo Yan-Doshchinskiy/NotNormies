@@ -9,15 +9,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__title {
     font-family: "a_CampusOtlSh", sans-serif;
     font-size: 80px;
     line-height: 100px;
   }
+
   &__underline {
     max-width: 460px;
     margin-bottom: 40px;
   }
+
   &__members {
     display: grid;
     width: 100%;
@@ -25,6 +28,14 @@
     justify-content: space-between;
     grid-row-gap: 100px;
   }
+
+  &__carousel {
+    width: 100%;
+    display: none;
+
+  }
+
+
   &__singleMember {
     width: 100%;
     display: flex;
@@ -32,16 +43,16 @@
     align-items: center;
     position: relative;
   }
+
   .singleMember {
     &__photo {
       width: 100%;
+      max-width: 100%;
       min-width: 100%;
       height: max-content;
-      max-width: $image_max_width;
       max-height: $image_max_height;
       border-radius: 22px;
       object-fit: fill;
-      overflow: hidden;
       margin-bottom: 20px;
     }
 
@@ -59,48 +70,104 @@
       border-radius: 22px;
     }
   }
+
   .vector {
     position: absolute;
     max-width: 100%;
     max-height: 400px;
+
     &__top {
       bottom: calc(100% + 20px);
+
       &_first {
         left: 0;
       }
     }
+
     &__right {
       left: calc(100% + 20px);
     }
+
     &__left {
       right: calc(100% + 20px);
+
       &_sec {
         top: 5%;
       }
     }
   }
-  @include _1199 {
-    &__members {
 
-      align-items: center;
-      justify-items: center;
-      grid-row-gap: 100px;
-    }
-    .singleMember {
-    }
-  }
-  @include _767 {
+  @include _1199 {
+    //padding-bottom: 0;
     &__members {
-      grid-template-columns: 100%;
-      justify-content: center;
-      align-items: center;
-      justify-items: center;
-      grid-row-gap: 100px;
+      display: none;
+    }
+    &__carousel {
+      width: 100%;
+      display: block;
     }
     &__singleMember {
       width: 60%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
     }
     .singleMember {
+      &__photo {
+        border-radius: 12px;
+      }
+
+      &__badge {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 10px;
+        border-radius: 12px;
+      }
+    }
+
+    .singleMember {
+    }
+  }
+  @include _991 {
+
+    &__singleMember {
+      width: 75%;
+    }
+  }
+  @include _767 {
+    .css-1f8sh1y {
+      max-height: unset;
+    }
+    padding-bottom: 30px;
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    &__underline {
+      max-width: 80%;
+      margin-bottom: 15px;
+    }
+    &__singleMember {
+      width: 100%;
+    }
+  }
+  @include _500 {
+    .css-1f8sh1y {
+      max-height: calc(100vw - 30px);
+    }
+  }
+  @include _480 {
+    &__title {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+  @include _400 {
+    &__title {
+      font-size: 42px;
+      line-height: 50px;
     }
   }
 }

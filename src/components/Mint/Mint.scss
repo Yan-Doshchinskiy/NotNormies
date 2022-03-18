@@ -47,6 +47,7 @@
     grid-template-columns: 100%;
     &__img {
       max-width: 30%;
+      border-radius: 12px;
     }
     &__hidden {
       display: none;

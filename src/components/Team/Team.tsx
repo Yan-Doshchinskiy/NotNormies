@@ -13,7 +13,7 @@ import { ReactComponent as VectorThirdTop } from "assets/img/team/vectors/third_
 import { ReactComponent as VectorThirdRight } from "assets/img/team/vectors/third_right.svg";
 import { ReactComponent as VectorFourthTop } from "assets/img/team/vectors/fourth_top.svg";
 import { ReactComponent as VectorFourthLeft } from "assets/img/team/vectors/fourth_left.svg";
-
+import Carousel from 'react-material-ui-carousel';
 
 export const Team = () => {
     return (
@@ -47,6 +47,31 @@ export const Team = () => {
                     <div className="singleMember__badge">DEV</div>
                 </div>
             </div>
+            <Carousel
+                stopAutoPlayOnHover
+                animation="slide"
+                swipe
+                indicators={false}
+                navButtonsAlwaysVisible
+                className="team__carousel"
+            >
+                <div className="team__singleMember singleMember">
+                    <NftArtist className="singleMember__photo" />
+                    <div className="singleMember__badge">Nft Artist</div>
+                </div>
+                <div className="team__singleMember singleMember">
+                    <Promoter className="singleMember__photo" />
+                    <div className="singleMember__badge">Promoter</div>
+                </div>
+                <div className="team__singleMember singleMember">
+                    <Boss className="singleMember__photo" />
+                    <div className="singleMember__badge">DEV</div>
+                </div>
+                <div className="team__singleMember singleMember">
+                    <Developer className="singleMember__photo" />
+                    <div className="singleMember__badge">DEV</div>
+                </div>
+            </Carousel>
         </div>
     );
 };
