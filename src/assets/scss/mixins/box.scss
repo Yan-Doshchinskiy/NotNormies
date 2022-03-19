@@ -23,6 +23,7 @@
   }
   @include _1199 {
     padding: 50px;
+    margin-bottom: 50px;
   }
   @include _991 {
     padding: 25px 50px 50px 50px;
@@ -33,9 +34,11 @@
   }
   @include _767 {
     border-radius: 12px;
+    margin-bottom: 25px;
   }
   @include _575 {
     padding: 30px;
+    margin-bottom: 20px;
     &__title {
       font-size: 36px;
       line-height: 38px;
