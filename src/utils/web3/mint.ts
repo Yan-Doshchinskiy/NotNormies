@@ -2,7 +2,7 @@ import MintABI from 'utils/abis/MINT_ABI.json';
 import BigNumber from "bignumber.js";
 import { getTokenCost } from "./view";
 import { getWalletAddress, getWeb3 } from "./connection";
-// import { getFee } from "./utilityFunctions";
+import { getFee } from "./utilityFunctions";
 
 const mintContractAddress = process.env.REACT_APP_CONTRACT_ADDRESS as string;
 
@@ -12,7 +12,7 @@ export const mintToken = async () => {
     const params = [mintAmount];
     const cost = await getTokenCost();
     const value = new BigNumber(cost).multipliedBy(mintAmount).toString();
-    // const fee = await getFee(method, MintABI, mintContractAddress, params);
+    const fee = await getFee(method, MintABI, mintContractAddress, params, value);
     const web3Wallet = getWeb3();
     const userAddress = await getWalletAddress();
     const inst = new web3Wallet.eth.Contract(MintABI, mintContractAddress);
@@ -22,8 +22,8 @@ export const mintToken = async () => {
         to: mintContractAddress,
         data,
         value,
-        // gasPrice: fee.gasPrice,
-        // gas: fee.estimatedGas
+        gasPrice: fee.gasPrice,
+        gas: fee.estimatedGas
     });
 };
 

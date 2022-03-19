@@ -21,7 +21,7 @@ export const sendTransaction = async (method: string, abi: Array<AbiItem> | any,
     });
 };
 
-export const getFee = async (method: string, abi: Array<any>, address: string, params?: Array<any>): Promise<any> => {
+export const getFee = async (method: string, abi: Array<any>, address: string, params?: Array<any>, value?: string): Promise<any> => {
     const currentWallet = getWeb3();
     const contract = new currentWallet.eth.Contract(abi, address);
     const userAddress = await getWalletAddress();
@@ -30,7 +30,7 @@ export const getFee = async (method: string, abi: Array<any>, address: string, p
       estimateGas
     ] = await Promise.all([
       currentWallet.eth.getGasPrice(),
-      contract.methods[method].apply(this, params).estimateGas({ from: userAddress })
+      contract.methods[method].apply(this, params).estimateGas({ from: userAddress, value })
     ]);
     return {
       gasPrice,
