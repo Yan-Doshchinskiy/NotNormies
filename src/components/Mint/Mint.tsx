@@ -61,7 +61,12 @@ export const Mint = ({ isConnected, handleConnect }: IMintProps) => {
         }
     };
     const handleMint = async () => {
-        await mintToken();
+        try {
+            await mintToken();
+            setTotalSupply(Number(await getTotalSupply()));
+        } catch (e) {
+            console.log(e);
+        }
     };
 
     // watcher
