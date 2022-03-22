@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import './Mint.scss';
 
 import { ReactComponent as Minter } from "assets/img/mint/minter.svg";
+import { toast } from 'react-toastify';
 import BaseButton from "components/ui/BaseButton/BaseButton";
 import BaseBadge from "components/ui/BaseBadge/BaseBadge";
 import { getMaxMintAmount, getMaxSupply, getTotalSupply, getUserBalance } from "../../utils/web3/view";
 import { getWalletAddress } from "../../utils/web3/connection";
 import mintToken from "../../utils/web3/mint";
+import generateError from "../../utils/errors";
 
 
 
@@ -64,8 +66,8 @@ export const Mint = ({ isConnected, handleConnect }: IMintProps) => {
         try {
             await mintToken();
             setTotalSupply(Number(await getTotalSupply()));
-        } catch (e) {
-            console.log(e);
+        } catch (e: any) {
+            toast.error(generateError(e));
         }
     };
 
