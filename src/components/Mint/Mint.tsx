@@ -86,20 +86,11 @@ export const Mint = ({ isConnected, handleConnect }: IMintProps) => {
                 <Minter className="mint__img"/>
             </div>
             <p className="mint__text">
-                He standard Lorem Ipsum passage, used since the 1500s
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-                Section 1.10.32 of de Finibus Bonorum et Malorum, written by Cicero in 45 BC
-                He standard Lorem Ipsum passage, used since the 1500s
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-                Section 1.10.32 of de Finibus Bonorum et Malorum, written by Cicero in 45 BC
+                NOTNORMIES is a collection of 5,555 unique, algorithmically generated dudes who
+                unite rebels from around the world. They live on the OpenSea platform. Each NOTNORMIS
+                carries the spirit of rebellion and courage. Embrace it within you. Take it into your
+                own hands. Become a part of it. &quot;Embrace&quot; it and you&lsquo;ll see it become a brand.
+                Including in web 3.0. &#128521;
             </p>
             <div className="mint__hidden" />
             <div className="mint__panel">
