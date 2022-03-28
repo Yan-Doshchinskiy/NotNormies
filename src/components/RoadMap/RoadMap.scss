@@ -26,10 +26,32 @@
   }
 
   &__right {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  //&__bar {
+  //  position: absolute;
+  //  left: -70px;
+  //  height: 100%;
+  //  min-width: 25px;
+  //  background: transparent;
+  //  &_solid {
+  //    position: relative;
+  //    left: unset;
+  //    background: repeating-linear-gradient(
+  //                    45deg,
+  //                    transparent,
+  //                    $purple-800 15px,
+  //    );
+  //  }
+  //}
+  //&__mark {
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: -45px;
+  //}
 
   &__list {
     width: 100%;
@@ -45,29 +67,71 @@
     border-image-outset: 1;
     border-image-slice: 3.3% 4.5% 3.3% 4.5%;
   }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__percent {
+    font-family: "a_CampusOtlSh", sans-serif;
+    font-size: 29px;
+    line-height: 42px;
+    position: absolute;
+    left: -33%;
+    text-align: right;
+    width: 105px;
+  }
 
   &__text {
     display: flex;
     word-break: break-word;
     font-family: "Cinzel", serif;
     font-size: 20px;
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
+
+  }
+  @include _1500 {
+    &__percent {
+      left: -35%;
+
+    }
+  }
+  @include _1400 {
+    &__percent {
+      left: -39%;
+      font-size: 26px;
+
     }
   }
 
+  @include _1300 {
+    &__percent {
+      left: -44%;
+      font-size: 25px;
+    }
+  }
+
+
   @include _1199 {
+    padding: 80px 80px 80px 160px;
     grid-template-columns: 100%;
     grid-row-gap: 30px;
     &__hidden {
       display: none;
     }
-    &__title {
-      display: flex;
-    }
     &__image {
       display: none;
+    }
+    &__title {
+      display: none;
+    }
+    &__percent {
+      left: -37%;
     }
   }
   @include _991 {
@@ -79,12 +143,21 @@
       padding: 0;
 
     }
+    &__percent {
+      left: -44%;
+    }
   }
   @include _767 {
+    padding: 40px;
+    &__title {
+      display: flex;
+    }
     &__text {
       font-size: 12px;
     }
     &__list {
+      width: 80%;
+      align-self: flex-end;
       padding: 20px 30px;
       border: unset;
       border-left: unset;
@@ -93,10 +166,34 @@
       border-image-outset: unset;
       border-image-slice: unset;
     }
+    &__percent {
+      left: -48%;
+    }
   }
   @include _575 {
+    padding: 20px 20px 20px 20px;
+
+    &__list {
+      width: 100%;
+    }
+    &__row {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
     &__text {
       font-size: 13px;
+    }
+    &__percent {
+      left: unset;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 21px;
+
+    }
+    &__dash {
+      display: none;
     }
   }
   @include _480 {
