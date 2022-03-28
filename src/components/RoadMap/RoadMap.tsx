@@ -22,17 +22,17 @@ export const RoadMap = () => {
         {
             id: 3,
             percent: 50,
-            text: 'Creation of your own clothing brand in IRL;'
+            text: 'Creation of your own clothing brand  IRL;'
         },
         {
             id: 4,
             percent: 60,
-            text: 'Beginning of cooperation with the metavalleens, in which we will produce our own line of clothing and accessories in the future;'
+            text: 'Beginning of cooperation with the metaverse, in which we will produce our own line of clothing and accessories in the future;'
         },
         {
             id: 5,
             percent: 75,
-            text: 'Drawing among holders;'
+            text: 'Drawing for holders;'
         },
         {
             id: 6,
